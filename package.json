@@ -18,5 +18,7 @@
         "url": "https://github.com/sdziekan/BooksFourHours/issues"
     },
     "homepage": "https://github.com/sdziekan/BooksFourHours#readme",
-    "dependencies": {}
+    "dependencies": {
+        "dotenv": "^6.0.0"
+    }
 }
