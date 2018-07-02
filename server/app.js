@@ -1,3 +1,4 @@
+require("dotenv").config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -7,7 +8,7 @@ var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 
 // Mongoose configuration
-mongoose.connect("mongodb://localhost/tf-books");
+mongoose.connect(process.env.MONGODB_URI);
 
 var index = require('./routes/index');
 var books = require('./routes/books');
