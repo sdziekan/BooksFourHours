@@ -32,7 +32,6 @@
       </v-footer>
 
     </v-app>
-
   </v-app>
 </template>
 
