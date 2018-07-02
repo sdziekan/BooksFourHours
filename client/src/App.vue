@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app>
-      <v-navigation-drawer v-model="drawer1" app right stateless>
+      <v-navigation-drawer v-model="drawer" app right stateless>
         <v-list>
           <v-expansion-panel app>
             <v-expansion-panel-content v-for="(item,i) in menu" :key="i">
@@ -15,9 +15,9 @@
       </v-navigation-drawer>
       <v-toolbar app fixed color="indigo lighten-5" class="elevation-6" height="100px">
         <img src="./assets/3redbooks-300px.png">
-        <v-toolbar-title>Tim Ferriss Show Book Recommendations</v-toolbar-title>
+        <v-toolbar-title v-text="toolbar_title"></v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-toolbar-side-icon @click.stop="drawer1 = !drawer1"></v-toolbar-side-icon>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       </v-toolbar>
       <v-content>
         <v-container fluid justify-center align-center>
@@ -40,9 +40,8 @@ export default {
   name: 'app',
 
   data: () => ({
-    drawer1: null,
-    drawer2: null
-    ,
+    toolbar_title: "Tim Ferriss Show Book Recommendations",
+    drawer: null,
     props: {
       source: String
     },
