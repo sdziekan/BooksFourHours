@@ -10,7 +10,7 @@ var mongoose = require("mongoose");
 // Mongoose configuration
 mongoose.connect(process.env.MONGODB_URI);
 
-var index = require('./routes/index');
+
 var books = require('./routes/books');
 var episodes = require('./routes/episodes');
 var guests = require('./routes/guests');
@@ -36,7 +36,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', index);
+
 app.use('/api/books', books);
 app.use('/api/episodes', episodes);
 app.use('/api/guests', guests);
