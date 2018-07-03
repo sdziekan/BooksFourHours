@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require("mongoose");
-mongoose.connect("mongoose://localhost/tf-books");
+mongoose.connect(process.env.MONGODB_URI);
 
 var Book = require("../models/Book.js");
 var Episode = require("../models/Episode.js");
